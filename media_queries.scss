@@ -1,0 +1,44 @@
+/* Variables */
+
+// Common breakpoints for widths of devices:
+$mobile_portrait_max_w: 480px;
+$tablet_portrait_max_w: 768;
+$small_laptops_max_w: 1024px;
+$large_screen_max_w: 1200px;
+// beyond 1200px is extra large screen
+
+// for mobile devices in portrait
+@media only screen 
+and (max-device-width: $mobile_portrait_max_w) {
+
+}
+// for mobile devices in landscape
+@media only screen 
+and (max-device-width: $tablet_portrait_max_w) 
+and (orientation: landscape) {
+
+}
+// for tablet devices in portrait
+@media only screen 
+and (min-device-width: calc($mobile_portrait_max_w + 1px)) 
+and (max-device-width: $tablet_portrait_max_w) 
+and (orientation: portrait) {
+
+}
+// for tablet devices in landscape and for small screen laptops
+@media only screen 
+and (min-device-width: calc($tablet_portrait_max_w + 1px)) 
+and (max-device-width: $small_laptops_max_w) {
+
+}
+// for large screens
+@media only screen 
+and (min-device-width: calc($small_laptops_max_w + 1px)) 
+and (max-device-width: $large_screen_max_w) {
+
+}
+// for extra large screens
+@media only screen 
+and (min-device-width: calc($large_screen_max_w + 1px)) {
+
+}
